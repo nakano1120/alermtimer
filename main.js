@@ -14,8 +14,7 @@ function updateTimer(m){
 
     let d = new Date()  //現在時刻
 
-    let s = 59-d.getSeconds();
-    m = ('0' + m).slice(-2); 
+    let s = 59-d.getSeconds(); 
     s = ('0' + s).slice(-2);
     timer.textContent = m + ':' + s;  //表示される文字列を設定
   }
