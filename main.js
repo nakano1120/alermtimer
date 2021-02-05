@@ -41,7 +41,7 @@ window.onload = function countDown(){
         }
       }
       next.textContent=startTimename[nowid]
-      timeLeft = (startTimehours[nowid]*60)+startTimeMinutes[nowid]-nowtime
+      timeLeft = (startTimehours[nowid]*60)+startTimeMinutes[nowid]-nowtime-1
       console.log(timeLeft)
       updateTimer(timeLeft);
       if(ns==59 && timeLeft==0){
