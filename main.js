@@ -34,7 +34,7 @@ window.onload = function countDown(){
       ns = ('0' + ns).slice(-2); 
       nowtimer.textContent = nh + ':' + nm + ':' + ns;
       for(let i=0;i<=startTimehours.length;i++){
-        endtime=(startTimehours[i]*60)+startTimeMinutes[i]
+        endtime=(startTimehours[i]*60)+startTimeMinutes[i]-1
         if(endtime>=nowtime){
             nowid=i
             break;
