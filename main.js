@@ -14,7 +14,7 @@ function updateTimer(m){
 
     let d = new Date()  //現在時刻
 
-    let s = 59-d.getSeconds(); 
+    let s = 59-d.getSeconds();1 
     s = ('0' + s).slice(-2);
     timer.textContent = m + ':' + s;  //表示される文字列を設定
   }
@@ -45,6 +45,10 @@ window.onload = function countDown(){
       updateTimer(timeLeft);
       if(ns==59 && timeLeft==0){
         music.play();  // 再生
+      }
+      if(nowid==0 || nowid==startTimename.length){
+        document.getElementById('container').style.backgroundColor="#dddddd"
+        document.getElementById('container').style.color="#222222"
       }
       countDown();
     },300);
