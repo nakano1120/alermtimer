@@ -1,6 +1,8 @@
 body{
     font-size:300%;
     text-align: center;
+    background-color:#0000aa;
+    color:#ffffff;
 }
 .container{
     display:inline-block;
