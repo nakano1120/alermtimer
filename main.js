@@ -16,7 +16,7 @@ function updateTimer(m){
 
     let s = 59-d.getSeconds();1 
     s = ('0' + s).slice(-2);
-    timer.textContent = m + ':' + s;  //表示される文字列を設定
+    timer.textContent = m + '分' + s + '秒';  //表示される文字列を設定
   }
 
 window.onload = function countDown(){
@@ -53,3 +53,9 @@ window.onload = function countDown(){
       countDown();
     },300);
 }
+function bgcolor(){
+  document.getElementById("container").style.backgroundColor=document.getElementById("bg").value
+}
+function txcolor(){
+  document.getElementById("container").style.color=document.getElementById("tx").value
+} 
