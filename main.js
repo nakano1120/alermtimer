@@ -14,10 +14,9 @@ function updateTimer(m){
 
     let d = new Date()  //現在時刻
 
-    let s = 59-d.getSeconds();
-    m = ('0' + m).slice(-2); 
+    let s = 59-d.getSeconds();1 
     s = ('0' + s).slice(-2);
-    timer.textContent = m + ':' + s;  //表示される文字列を設定
+    timer.textContent = m + '分' + s + '秒';  //表示される文字列を設定
   }
 
 window.onload = function countDown(){
@@ -47,6 +46,16 @@ window.onload = function countDown(){
       if(ns==59 && timeLeft==0){
         music.play();  // 再生
       }
+      if(nowid==0 || nowid==startTimename.length){
+        document.getElementById('container').style.backgroundColor="#dddddd"
+        document.getElementById('container').style.color="#222222"
+      }
       countDown();
     },300);
 }
+function bgcolor(){
+  document.getElementById("container").style.backgroundColor=document.getElementById("bg").value
+}
+function txcolor(){
+  document.getElementById("container").style.color=document.getElementById("tx").value
+} 

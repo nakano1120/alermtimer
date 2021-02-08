@@ -4,13 +4,30 @@
     <meta charset="utf-8">
     <title>タイマー</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
-      <h1 id="nowtimer">00:00:00</h1>
+    <div id="container">
+      <h1><div id="nowtimer">00:00:00</div></h1>
       <p><span id="next"></span>まであと</p>
       <div id="timer">00：00:00</div>
       <div class="controls">
+        <div class="pop-box">
+          <label for="popup-on"><div class="btn-open">設定</div></label>
+          <input type="checkbox" id="popup-on">
+          <div class="popup">
+            <label for="popup-on" class="icon-close">×</label>
+            <div class="popup-content">
+              <!-- ポップアップの中身 -->
+              <br>設定<br>
+              背景色:<input type="color" id="bg" value="#0000aa" onchange="bgcolor()">
+              文字色:<input type="color" id="tx" value="#eeeeee" onchange="txcolor()">
+              <!-- ./ポップアップの中身　ここまで -->
+            </div>
+            <label for="popup-on"><div class="btn-close">閉じる</div></label>
+          </div>
+        </div>
       </div>
     </div>
     <script src="main.js"></script>
