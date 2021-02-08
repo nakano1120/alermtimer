@@ -53,6 +53,7 @@ body{
   
 /* 閉じるアイコン（右上） */
 .icon-close{
+    cursor: pointer;
     background: #000;
     color: #fff;
     font-size: 30px;
