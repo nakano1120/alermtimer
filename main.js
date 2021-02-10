@@ -85,11 +85,13 @@ window.onload = function countDown() {
     countDown();
   }, 300);
 };
+
 function bgcolor() {
   document.getElementById(
     "container"
   ).style.backgroundColor = document.getElementById("bg").value;
 }
+
 function txcolor() {
   document.getElementById("container").style.color = document.getElementById(
     "tx"

@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "electron": "^11.2.3",
+    "electron-builder": "^22.9.1"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "name": "alermtimer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mochi-sann/alermtimer.git",
+  "author": "mochi-sann <moyurusuto@gmail.com>",
+  "license": "MIT"
+}
