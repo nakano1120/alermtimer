@@ -16,7 +16,7 @@ body{
     width:100%;
     height:100vh;
     margin: 0 auto;
-    background-color:#0000aa;
+    background-color:#2d74d1;
     color:#eeeeee;
 }
 /* 全体設定 */
@@ -53,6 +53,7 @@ body{
   
 /* 閉じるアイコン（右上） */
 .icon-close{
+    cursor: pointer;
     background: #000;
     color: #fff;
     font-size: 30px;
