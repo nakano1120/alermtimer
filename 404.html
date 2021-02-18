@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 not found</title>
+    <style>
+        body{
+            background-color:#333333;
+            text-align:center;
+            color:#ffffff;
+            margin:0;
+        }
+        div{
+            margin:0;
+            padding:0;
+            width:100vw;
+            height:50vh;
+        }
+        .box1{
+            background-color:#eeeeff;
+        }
+        .box2{
+            font-size:400%;
+            background-color:#ccccff;
+        }
+        td {
+            background-color: #AAAAAA;
+            width: 10%; /* 横10マス */
+            height: 5%; /* 縦20マス */
+        }
+        .balloon2-left {
+            position: relative;
+            display: inline-block;
+            margin: 1.5em 0 1.5em 15px;
+            padding: 70px 30px;
+            min-width: 120px;
+            max-width: 100%;
+            color: #555;
+            font-size: 16px;
+            background: #FFF;
+            border: solid 3px #555;
+            box-sizing: border-box;
+        }
+
+        .balloon2-left:before {
+            content: "";
+            position: absolute;
+            top: 10%;
+            left: -24px;
+            margin-top: -12px;
+            border: 12px solid transparent;
+            border-right: 12px solid #FFF;
+            z-index: 2;
+        }
+
+        .balloon2-left:after {
+            content: "";
+            position: absolute;
+            top: 10%;
+            left: -30px;
+            margin-top: -14px;
+            border: 14px solid transparent;
+            border-right: 14px solid #555;
+            z-index: 1;
+        }
+
+        .balloon2-left p {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <img src="kids.png">
+        <span class="balloon2-left">
+            <p>404 not found</p>
+        </span>
+        <img src="kids2.png">
+        <span class="balloon2-left">
+            <p>404 not found</p>
+        </span>
+    </div>
+
+    <div class="box2">
+        声の出演<br>
+        404　NOTFOUND<br>
+        ページ　存在しません<br>
+    </div>
+    
+
+</body>
+</html>
