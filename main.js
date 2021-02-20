@@ -26,7 +26,7 @@ let startTimename = [
   "下校",
   "次の日",
 ];
-var startTimehours = [9, 9, 10, 10, 11, 11, 12, 13, 14, 14, 15, 15, 16, 16, 23];
+var startTimehours = [9, 9, 10, 10, 11, 11, 12, 13, 14, 14, 15, 15, 16, 16, 24];
 let startTimeMinutes = [
   30,
   45,
@@ -42,7 +42,7 @@ let startTimeMinutes = [
   15,
   05,
   15,
-  59,
+  00,
 ];
 let timeLeft;
 let timerId;
