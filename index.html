@@ -19,6 +19,9 @@
     <p><span id="next"></span>まであと</p>
     <div id="timer">00：00:00</div>
     <div class="controls">
+      <input type="button" id="f1" value="Google" onclick="openthelink(1)">
+      <input type="button" id="f2" value="N予備校" onclick="openthelink(2)">
+      <input type="button" id="f3" value="Classroom" onclick="openthelink(3)">
       <div class="pop-box">
         <label for="popup-on">
           <div class="btn-open">設定</div>
@@ -28,9 +31,15 @@
           <label for="popup-on" class="icon-close">×</label>
           <div class="popup-content">
             <!-- ポップアップの中身 -->
-            <br>設定<br>
+            <h1>設定</h1>
             背景色:<input type="color" id="bg" value="#0000aa" onchange="bgcolor()">
-            文字色:<input type="color" id="tx" value="#eeeeee" onchange="txcolor()">
+            文字色:<input type="color" id="tx" value="#eeeeee" onchange="txcolor()"><br>
+            F1の表示:<input type="text" id="f1text" value="Google" onchange="vachange(1)">
+            F1のリンク:<input type="text" id="f1link" value="https://www.google.co.jp/" onchange="lichange(1)"><br>
+            F2の表示:<input type="text" id="f2text" value="N予備校" onchange="vachange(2)">
+            F2のリンク:<input type="text" id="f2link" value="https://www.nnn.ed.nico/home" onchange="lichange(2)"><br>
+            F3の表示:<input type="text" id="f3text" value="Classroom" onchange="vachange(3)">
+            F3のリンク:<input type="text" id="f3link" value="https://classroom.google.com/" onchange="lichange(3)"><br>
             <!-- ./ポップアップの中身　ここまで -->
           </div>
           <label for="popup-on">
