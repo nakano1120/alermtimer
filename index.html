@@ -17,7 +17,8 @@
       <div id="nowtimer">00:00:00</div>
     </h1>
     <p><span id="next"></span>まであと</p>
-    <div id="timer">00：00:00</div>
+    <div id="timer">00：00:00</div><br>
+    <div id="remind">(朝ちゃんと起きる 8:00)</div>
     <div class="controls">
       <input type="button" id="f1" value="Google" onclick="openthelink(1)">
       <input type="button" id="f2" value="N予備校" onclick="openthelink(2)">
@@ -40,6 +41,8 @@
             F2のリンク:<input type="text" id="f2link" value="https://www.nnn.ed.nico/home" onchange="lichange(2)"><br>
             F3の表示:<input type="text" id="f3text" value="Classroom" onchange="vachange(3)">
             F3のリンク:<input type="text" id="f3link" value="https://classroom.google.com/" onchange="lichange(3)"><br>
+            リマインダー名前:<input type="text" id="alermtext" value="朝ちゃんと起きる" onchange="changealerm()"><br>
+            リマインダー時刻:<input type="time" id="alermtime" value="08:00" onchange="changealerm()"><br>
             <!-- ./ポップアップの中身　ここまで -->
           </div>
           <label for="popup-on">

@@ -6,6 +6,7 @@ let myf2text
 let myf2link
 let myf3text
 let myf3link
+let alermms
 let timer = document.getElementById("timer");
 let nowtimer = document.getElementById("nowtimer");
 let next = document.getElementById("next");
@@ -44,9 +45,11 @@ let startTimeMinutes = [
   15,
   00,
 ];
+let alermleft;
 let timeLeft;
 let timerId;
 let isRunning = false;
+
 let music = new Audio("se.mp3");
 
 function startup(){
@@ -58,6 +61,8 @@ function startup(){
   myf1link = localStorage.getItem("myf1link");
   myf2link = localStorage.getItem("myf2link");
   myf3link = localStorage.getItem("myf3link");
+  myalermtext = localStorage.getItem("myalermtext");
+  myalermtime = localStorage.getItem("myalermtime");
   if(mybgcolor === null){
     localStorage.setItem('mybgcolor',"#0000aa");
     mybgcolor = localStorage.getItem("mybgcolor");
@@ -90,6 +95,14 @@ function startup(){
     localStorage.setItem('myf3link',"https://classroom.google.com/");
     myf3link = localStorage.getItem("myf3link");
   }
+  if(myalermtext === null){
+    localStorage.setItem('myalermtext',"朝ちゃんと起きる");
+    myalermtext = localStorage.getItem("myalermtext");
+  }
+  if(myalermtime === null){
+    localStorage.setItem('myalermtime',"08:00");
+    myalermtime = localStorage.getItem("myalermtime");
+  }
   document.getElementById("bg").value=mybgcolor;
   document.getElementById("tx").value=mytxcolor;
   document.getElementById("container").style.backgroundColor=mybgcolor;
@@ -103,8 +116,14 @@ function startup(){
   document.getElementById("f1link").value=myf1link;
   document.getElementById("f2link").value=myf2link;
   document.getElementById("f3link").value=myf3link;
+  document.getElementById("alermtext").value=myalermtext;
+  document.getElementById("alermtime").value=myalermtime;
+  document.getElementById("remind").textContent="("+myalermtext+"　"+myalermtime+")";
+  alermms=myalermtime.split(":");
 }
-startup()
+
+startup();
+
 function updateTimer(m) {
   let d = new Date(); //現在時刻
   let s = 59 - d.getSeconds();
@@ -133,10 +152,11 @@ window.onload = function countDown() {
       }
     }
     next.textContent = startTimename[nowid];
-    timeLeft =
-      startTimehours[nowid] * 60 + startTimeMinutes[nowid] - nowtime - 1;
+    timeLeft = startTimehours[nowid] * 60 + startTimeMinutes[nowid] - nowtime - 1;
+    alermleft = parseInt(alermms[0]) * 60 + parseInt(alermms[1]) - nowtime - 1;
+    console.log(alermleft)
     updateTimer(timeLeft);
-    if (ns == 59 && timeLeft == 0) {
+    if (ns == 59 && timeLeft == 0 || ns == 59 && alermleft == 0) {
       music.play(); // 再生
     }
     countDown();
@@ -194,4 +214,12 @@ function openthelink(ban){
     window.open(myf3link)
   }
 
+}
+function changealerm(){
+  myalermtext=document.getElementById("alermtext").value
+  myalermtime=document.getElementById("alermtime").value
+  localStorage.setItem('myalermtext', myalermtext);
+  localStorage.setItem('myalermtime', myalermtime);
+  alermms=myalermtime.split(":");
+  document.getElementById("remind").textContent="("+myalermtext+"　"+myalermtime+")";
 }
